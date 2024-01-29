@@ -90,10 +90,15 @@ while True:
             read_email(inbox, index)
         elif user_choice == 2:
             # add logic here to view unread emails
-                
+            unread_emails = [email for email in inbox if not email.has_been_read]
+            print("\n---------------------- Unread Emails -----------------------\n")
+            for i, email in enumerate(unread_emails, 1):
+                print(f"\n{i}: {email.subject_line}")
+
+                # Need to show a message if the unread box is empty
+            print("\n")
         elif user_choice == 3:
             # add logic here to quit appplication
-
         else:
             print("Oops - incorrect input.")
 
