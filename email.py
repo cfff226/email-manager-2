@@ -48,10 +48,18 @@ def list_emails(inbox):
     for i, email in enumerate(inbox_emails, 1):
         print(f"\n{i}: {email.subject_line}")
 
-def read_email(index):
 
-    # Create a function which displays a selected email. 
+  # Create a function which displays a selected email. 
+def read_email(inbox, index):
+    print("\n------------------------- Email Inbox ------------------------- \n")
+    index = int(index)
+    selected_email = inbox[index - 1]
+    print(
+        f"\n\nFrom: {selected_email.email_address}\n\nTitle: {selected_email.subject_line}\n\nEmail: {selected_email.email_content}\n\n"
+    )
     # Once displayed, call the class method to set its 'has_been_read' variable to True.
+    selected_email.mark_as_read()
+
 
 # --- Email Program --- #
 
