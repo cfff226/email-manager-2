@@ -41,9 +41,12 @@ def populate_inbox():
     ]
     return inbox
 
-def list_emails():
-    
+def list_emails(inbox):
     # Create a function which prints the email’s subject_line, along with a corresponding number.
+    inbox_emails = [email for email in inbox]
+    print("\n------------------- Emails in your inbox ------------------- \n")
+    for i, email in enumerate(inbox_emails, 1):
+        print(f"\n{i}: {email.subject_line}")
 
 def read_email(index):
 
