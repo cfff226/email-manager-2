@@ -1,5 +1,6 @@
 ### --- OOP Email Simulator --- ###
 
+
 # --- Email Class --- #
 # Create the class, constructor and methods to create a new Email object.
 class Email:
@@ -14,14 +15,16 @@ class Email:
         self.has_been_read = True
         print(f"\n------------------ This email has been read -------------------\n")
 
+
 # --- Lists --- #
 # Initialise an empty list to store the email objects.
 
 # --- Functions --- #
 # Build out the required functions for your program.
 
+
 def populate_inbox():
-    # Create 3 sample emails and add it to the Inbox list. 
+    # Create 3 sample emails and add it to the Inbox list.
     inbox = [
         Email(
             "caroline.fox21@outlook.com",
@@ -41,6 +44,7 @@ def populate_inbox():
     ]
     return inbox
 
+
 def list_emails(inbox):
     # Create a function which prints the email’s subject_line, along with a corresponding number.
     inbox_emails = [email for email in inbox]
@@ -49,7 +53,7 @@ def list_emails(inbox):
         print(f"\n{i}: {email.subject_line}")
 
 
-  # Create a function which displays a selected email. 
+# Create a function which displays a selected email.
 def read_email(inbox, index):
     print("\n------------------------- Email Inbox ------------------------- \n")
     index = int(index)
@@ -68,7 +72,6 @@ def read_email(inbox, index):
 # Fill in the logic for the various menu operations.
 
 
-
 inbox = populate_inbox()
 while True:
     try:
@@ -80,16 +83,17 @@ while True:
         3. Quit application
 
         Enter selection: """
+            )
         )
         if user_choice == 1:
-            # add logic here to read an email
+            # Add logic here to read an email
             list_emails(inbox)
             index = input(
                 "\n\nPlease select an email from the list that you would like to read: "
             )
             read_email(inbox, index)
         elif user_choice == 2:
-            # add logic here to view unread emails
+            # Add logic here to view unread emails
             unread_emails = [email for email in inbox if not email.has_been_read]
             print("\n---------------------- Unread Emails -----------------------\n")
             for i, email in enumerate(unread_emails, 1):
@@ -97,8 +101,17 @@ while True:
 
                 # Need to show a message if the unread box is empty
             print("\n")
-        elif user_choice == 3:
-            # add logic here to quit appplication
-        else:
-            print("Oops - incorrect input.")
-
+        if user_choice == 3:
+            # Add logic here to quit appplication
+            print(
+                "\n--------------- Thanks for using the Email Manager ---------------\n"
+            )
+            exit()
+            # Check if choice is greater than or less than or equal to 0
+        if user_choice > 3 or user_choice <= 0:
+            print(
+                "\n--------------------- Oops! Incorrect input --------------------\n"
+            )
+    except ValueError:
+        print("\n--------------------- Oops! Incorrect input --------------------\n")
+        continue
