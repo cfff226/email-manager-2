@@ -79,11 +79,15 @@ while True:
         2. View unread emails
         3. Quit application
 
-        Enter selection: """)
-        
+        Enter selection: """
+        )
         if user_choice == 1:
             # add logic here to read an email
-            
+            list_emails(inbox)
+            index = input(
+                "\n\nPlease select an email from the list that you would like to read: "
+            )
+            read_email(inbox, index)
         elif user_choice == 2:
             # add logic here to view unread emails
                 
