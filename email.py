@@ -1,6 +1,5 @@
 ### --- OOP Email Simulator --- ###
 
-
 # --- Email Class --- #
 # Create the class, constructor and methods to create a new Email object.
 class Email:
@@ -18,10 +17,6 @@ class Email:
 
 # --- Lists --- #
 # Initialise an empty list to store the email objects.
-
-# --- Functions --- #
-# Build out the required functions for your program.
-
 
 def populate_inbox():
     # Create 3 sample emails and add it to the Inbox list.
@@ -67,10 +62,6 @@ def read_email(inbox, index):
 
 # --- Email Program --- #
 
-# Call the function to populate the Inbox for further use in your program.
-
-# Fill in the logic for the various menu operations.
-
 
 inbox = populate_inbox()
 while True:
@@ -87,11 +78,24 @@ while True:
         )
         if user_choice == 1:
             # Add logic here to read an email
-            list_emails(inbox)
-            index = input(
-                "\n\nPlease select an email from the list that you would like to read: "
-            )
-            read_email(inbox, index)
+            while True:
+                list_emails(inbox)
+                try:
+                    index = (input(
+                        "\n\nPlease select an email from the list that you would like to read: "
+                    ))
+                    if int(index) > len(inbox):
+                        print("\n\n------------- This number isn't in your inbox --------------\n")
+                        continue
+                    if int(index) <= 0:
+                        print("\n\n------------- This number isn't in your inbox --------------\n")
+                        continue
+                except ValueError:
+                    print("\n------------------ Please enter a number -------------------\n")
+                    continue
+                else:
+                    read_email(inbox, index)
+                    break
         elif user_choice == 2:
             # Add logic here to view unread emails
             unread_emails = [email for email in inbox if not email.has_been_read]
@@ -101,17 +105,19 @@ while True:
 
                 # Need to show a message if the unread box is empty
             print("\n")
-        if user_choice == 3:
+            continue
+        elif user_choice == 3:
             # Add logic here to quit appplication
             print(
                 "\n--------------- Thanks for using the Email Manager ---------------\n"
             )
             exit()
             # Check if choice is greater than or less than or equal to 0
-        if user_choice > 3 or user_choice <= 0:
+        elif user_choice > 3 or user_choice >= 0:
             print(
                 "\n--------------------- Oops! Incorrect input --------------------\n"
             )
+            continue
     except ValueError:
         print("\n--------------------- Oops! Incorrect input --------------------\n")
         continue
