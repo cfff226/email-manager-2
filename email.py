@@ -39,7 +39,6 @@ def populate_inbox():
     ]
     return inbox
 
-
 def list_emails(inbox):
     # Create a function which prints the email’s subject_line, along with a corresponding number.
     inbox_emails = [email for email in inbox]
@@ -49,6 +48,7 @@ def list_emails(inbox):
 
 
 # Create a function which displays a selected email.
+
 def read_email(inbox, index):
     print("\n------------------------- Email Inbox ------------------------- \n")
     index = int(index)
@@ -62,6 +62,28 @@ def read_email(inbox, index):
 
 # --- Email Program --- #
 
+# Fill in the logic for the various menu operations.
+menu = True
+
+while True:
+    user_choice = int(input('''\nWould you like to:
+    1. Read an email
+    2. View unread emails
+    3. Quit application
+
+    Enter selection: '''))
+       
+    if user_choice == 1:
+        # add logic here to read an email
+        
+    elif user_choice == 2:
+        # add logic here to view unread emails
+            
+    elif user_choice == 3:
+        # add logic here to quit appplication
+
+    else:
+        print("Oops - incorrect input.")
 
 inbox = populate_inbox()
 while True:
