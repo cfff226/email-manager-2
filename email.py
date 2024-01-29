@@ -1,5 +1,6 @@
 ### --- OOP Email Simulator --- ###
 
+
 # --- Email Class --- #
 # Create the class, constructor and methods to create a new Email object.
 class Email:
@@ -17,6 +18,7 @@ class Email:
 
 # --- Lists --- #
 # Initialise an empty list to store the email objects.
+
 
 def populate_inbox():
     # Create 3 sample emails and add it to the Inbox list.
@@ -39,6 +41,7 @@ def populate_inbox():
     ]
     return inbox
 
+
 def list_emails(inbox):
     # Create a function which prints the email’s subject_line, along with a corresponding number.
     inbox_emails = [email for email in inbox]
@@ -48,6 +51,7 @@ def list_emails(inbox):
 
 
 # Create a function which displays a selected email.
+
 
 def read_email(inbox, index):
     print("\n------------------------- Email Inbox ------------------------- \n")
@@ -64,26 +68,6 @@ def read_email(inbox, index):
 
 # Fill in the logic for the various menu operations.
 menu = True
-
-while True:
-    user_choice = int(input('''\nWould you like to:
-    1. Read an email
-    2. View unread emails
-    3. Quit application
-
-    Enter selection: '''))
-       
-    if user_choice == 1:
-        # add logic here to read an email
-        
-    elif user_choice == 2:
-        # add logic here to view unread emails
-            
-    elif user_choice == 3:
-        # add logic here to quit appplication
-
-    else:
-        print("Oops - incorrect input.")
 
 inbox = populate_inbox()
 while True:
@@ -103,17 +87,23 @@ while True:
             while True:
                 list_emails(inbox)
                 try:
-                    index = (input(
+                    index = input(
                         "\n\nPlease select an email from the list that you would like to read: "
-                    ))
+                    )
                     if int(index) > len(inbox):
-                        print("\n\n------------- This number isn't in your inbox --------------\n")
+                        print(
+                            "\n\n------------- This number isn't in your inbox --------------\n"
+                        )
                         continue
                     if int(index) <= 0:
-                        print("\n\n------------- This number isn't in your inbox --------------\n")
+                        print(
+                            "\n\n------------- This number isn't in your inbox --------------\n"
+                        )
                         continue
                 except ValueError:
-                    print("\n------------------ Please enter a number -------------------\n")
+                    print(
+                        "\n------------------ Please enter a number -------------------\n"
+                    )
                     continue
                 else:
                     read_email(inbox, index)
@@ -131,7 +121,7 @@ while True:
         elif user_choice == 3:
             # Add logic here to quit appplication
             print(
-                "\n--------------- Thanks for using the Email Manager ---------------\n"
+                "\n--------------- Thanks for using the Email Manager ---------------\n\n"
             )
             exit()
             # Check if choice is greater than or less than or equal to 0
@@ -141,5 +131,5 @@ while True:
             )
             continue
     except ValueError:
-        print("\n--------------------- Oops! Incorrect input --------------------\n")
+        print("\n------------------ Oops! Incorrect input -----------------\n")
         continue
