@@ -45,7 +45,7 @@ def populate_inbox():
 def list_emails(inbox):
     # Create a function which prints the email’s subject_line, along with a corresponding number.
     inbox_emails = [email for email in inbox]
-    print("\n------------------- Emails in your inbox ------------------- \n")
+    print("\n------------------- Emails in your inbox -------------------\n")
     for i, email in enumerate(inbox_emails, 1):
         print(f"\n{i}: {email.subject_line}")
 
@@ -54,7 +54,7 @@ def list_emails(inbox):
 
 
 def read_email(inbox, index):
-    print("\n------------------------- Email Inbox ------------------------- \n")
+    print(f"\n------------------------- Email {index} -------------------------\n")
     index = int(index)
     selected_email = inbox[index - 1]
     print(
@@ -121,7 +121,7 @@ while True:
         elif user_choice == 3:
             # Add logic here to quit appplication
             print(
-                "\n--------------- Thanks for using the Email Manager ---------------\n\n"
+                "\n--------------- Thanks for using the Email Manager ---------------\n"
             )
             exit()
             # Check if choice is greater than or less than or equal to 0
