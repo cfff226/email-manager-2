@@ -112,17 +112,18 @@ while True:
             # Add logic here to view unread emails
             unread_emails = [email for email in inbox if not email.has_been_read]
             print("\n---------------------- Unread Emails -----------------------\n")
-            for i, email in enumerate(unread_emails, 1):
-                print(f"\n{i}: {email.subject_line}")
-
-                # Need to show a message if the unread box is empty
-            print("\n")
-            continue
+            if len(unread_emails) == 0:
+                print(
+                    "\n---------------- There are no unread emails ----------------\n"
+                )
+            else:
+                for i, email in enumerate(unread_emails, 1):
+                    print(f"\n{i}: {email.subject_line}")
+                print("\n")
+                continue
         elif user_choice == 3:
             # Add logic here to quit appplication
-            print(
-                "\n--------------- Thanks for using the Email Manager ---------------\n"
-            )
+            print("\n------------- Thanks for using the Email Manager -------------\n")
             exit()
             # Check if choice is greater than or less than or equal to 0
         elif user_choice > 3 or user_choice >= 0:
@@ -130,6 +131,7 @@ while True:
                 "\n--------------------- Oops! Incorrect input --------------------\n"
             )
             continue
+    # Show a value error if an incorrect value is entered
     except ValueError:
         print("\n------------------ Oops! Incorrect input -----------------\n")
         continue
