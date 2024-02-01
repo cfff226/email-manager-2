@@ -16,10 +16,7 @@ class Email:
         print(f"\n------------------ This email has been read -------------------\n")
 
 
-# --- Lists --- #
-# Initialise an empty list to store the email objects.
-
-
+# Function which creates the email inbox.
 def populate_inbox():
     # Create 3 sample emails and add it to the Inbox list.
     inbox = [
@@ -42,8 +39,8 @@ def populate_inbox():
     return inbox
 
 
+# Function which prints the email’s subject_line, along with a corresponding number.
 def list_emails(inbox):
-    # Create a function which prints the email’s subject_line, along with a corresponding number.
     inbox_emails = [email for email in inbox]
     print("\n------------------- Emails in your inbox -------------------\n")
     for i, email in enumerate(inbox_emails, 1):
@@ -51,8 +48,6 @@ def list_emails(inbox):
 
 
 # Create a function which displays a selected email.
-
-
 def read_email(inbox, index):
     print(f"\n------------------------- Email {index} -------------------------\n")
     index = int(index)
@@ -64,9 +59,7 @@ def read_email(inbox, index):
     selected_email.mark_as_read()
 
 
-# --- Email Program --- #
-
-# Fill in the logic for the various menu operations.
+# Display the menu.
 menu = True
 
 inbox = populate_inbox()
@@ -83,23 +76,26 @@ while True:
             )
         )
         if user_choice == 1:
-            # Add logic here to read an email
+            # Logic to read an email.
             while True:
                 list_emails(inbox)
                 try:
                     index = input(
                         "\n\nPlease select an email from the list that you would like to read: "
                     )
+                    # Check if the index number is higher than inbox length.
                     if int(index) > len(inbox):
                         print(
                             "\n\n------------- This number isn't in your inbox --------------\n"
                         )
                         continue
+                    # Check if index number is less than or equal to 0.
                     if int(index) <= 0:
                         print(
                             "\n\n------------- This number isn't in your inbox --------------\n"
                         )
                         continue
+                # Show a value error if a number isn't entered.
                 except ValueError:
                     print(
                         "\n------------------ Please enter a number -------------------\n"
@@ -109,7 +105,7 @@ while True:
                     read_email(inbox, index)
                     break
         elif user_choice == 2:
-            # Add logic here to view unread emails
+            # Logic to view unread emails.
             unread_emails = [email for email in inbox if not email.has_been_read]
             print("\n---------------------- Unread Emails -----------------------\n")
             if len(unread_emails) == 0:
@@ -122,7 +118,7 @@ while True:
                 print("\n")
                 continue
         elif user_choice == 3:
-            # Add logic here to quit appplication
+            # Logic to quit appplication
             print("\n------------- Thanks for using the Email Manager -------------\n")
             exit()
             # Check if choice is greater than or less than or equal to 0
