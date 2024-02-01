@@ -13,7 +13,7 @@ class Email:
     # Create the method to change 'has_been_read' emails from False to True.
     def mark_as_read(self):
         self.has_been_read = True
-        print(f"\n------------------ This email has been read -------------------\n")
+        print(f"\n------------------- This email has been read --------------------\n")
 
 
 # Function which creates the email inbox.
@@ -42,7 +42,7 @@ def populate_inbox():
 # Function which prints the email’s subject_line, along with a corresponding number.
 def list_emails(inbox):
     inbox_emails = [email for email in inbox]
-    print("\n------------------- Emails in your inbox -------------------\n")
+    print("\n--------------------- Emails in your inbox ---------------------\n")
     for i, email in enumerate(inbox_emails, 1):
         print(f"\n{i}: {email.subject_line}")
 
@@ -86,19 +86,19 @@ while True:
                     # Check if the index number is higher than inbox length.
                     if int(index) > len(inbox):
                         print(
-                            "\n\n------------- This number isn't in your inbox --------------\n"
+                            "\n\n--------------- This number isn't in your inbox ----------------\n"
                         )
                         continue
                     # Check if index number is less than or equal to 0.
                     if int(index) <= 0:
                         print(
-                            "\n\n------------- This number isn't in your inbox --------------\n"
+                            "\n\n--------------- This number isn't in your inbox ----------------\n"
                         )
                         continue
                 # Show a value error if a number isn't entered.
                 except ValueError:
                     print(
-                        "\n------------------ Please enter a number -------------------\n"
+                        "\n-------------------- Please enter a number ---------------------\n"
                     )
                     continue
                 else:
@@ -107,10 +107,10 @@ while True:
         elif user_choice == 2:
             # Logic to view unread emails.
             unread_emails = [email for email in inbox if not email.has_been_read]
-            print("\n---------------------- Unread Emails -----------------------\n")
+            print("\n------------------------- Unread Emails -------------------------\n")
             if len(unread_emails) == 0:
                 print(
-                    "\n---------------- There are no unread emails ----------------\n"
+                    "\n------------------ There are no unread emails ------------------\n"
                 )
             else:
                 for i, email in enumerate(unread_emails, 1):
@@ -118,16 +118,16 @@ while True:
                 print("\n")
                 continue
         elif user_choice == 3:
-            # Logic to quit appplication
-            print("\n------------- Thanks for using the Email Manager -------------\n")
+            # Logic to quit appplication.
+            print("\n-------------- Thanks for using the Email Manager ---------------\n")
             exit()
-            # Check if choice is greater than or less than or equal to 0
+            # Check if choice is greater than or less than or equal to 0.
         elif user_choice > 3 or user_choice >= 0:
             print(
                 "\n--------------------- Oops! Incorrect input --------------------\n"
             )
             continue
-    # Show a value error if an incorrect value is entered
+    # Show a value error if an incorrect value is entered.
     except ValueError:
-        print("\n------------------ Oops! Incorrect input -----------------\n")
+        print("\n--------------------- Oops! Incorrect input --------------------\n")
         continue
