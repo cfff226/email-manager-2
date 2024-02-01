@@ -1,0 +1,56 @@
+### --- OOP Email Simulator --- ###
+# A program which simulates an email inbox, enabling users to view emails in their inbox and sort by unread
+
+# Create an email class
+# Add a constructor and initialize with self and add email_adress, subject_line and email_content
+# Create a class instance variable for has been read and set it's value to False
+# Create a instance of the class for email address and set it the default value of email address
+# Create the instance of the class for subject line and set it the default value of subject line
+# Create the instance of the class for email content and set it the default value of email content
+# Create a method to change the has_been_read emails from False to True
+# Change the has_been_read instance variable to True for an email that is passed into the class
+# Display a message to the user to show that the email has been read
+# Create a function for populating the inbox
+# Create a list called inbox which holds 3 instances of the Email class, each one repesenting an email
+# Return inbox
+# Create a function for listing the emails and pass in the inbox argument
+# Loop through emails in the inbox and assign this to variable
+# Display a message to the user titled 'Emails in your inbox'
+# Using enumerate starting from 1, loop through all emails
+# Display a message to the user which lists all emails subject lines with a corresponding number
+# Create a function whih displays a selected email and pass in the inbox and index arguments
+# Display a message to the user to show the number of the email they have selected
+# Cast the index into an integer
+# Assign the selected email with the chosen index minus 1 to a variable (so the number now alligns with the index)
+# Output the selected email to the user
+# Call the mark_as_read method for the selected email to set has_been_read to True for the email
+# Call the populate_inbox function, this will be called first to populate the inbox at the start of the program
+# Display the menu to the user, this will be the initial print statement that displays in the terminal when the program starts
+# Add a while True statement
+# Add a try statement
+# Request a number from the user for their menu choice
+# Add if statement to check if user choice is equal to 1
+# Add while True statement
+# Call the list_emails function to list the subject lines of the each email with a corresponding number
+# Add a try statement
+# Request a number from the user for their email choice
+# Add if statement to check if the index they have given is higher than the length of the inbox
+# Display a message to show that the chosen number doesn't exist in the list and continue with the loop
+# Add if statement to check if the index they have given is less than or equal to 0
+# Display a message to show that the chosen number doesn't exist in the list and continue with the loop
+# Add except statement and display a value error is a number isn't entered and continue with the loop
+# Add else statement
+# Call the read_email function is a valid number is given and break out of the loop
+# Add if statement to check if the user choice is equal to 2
+# Loop through all emails and assign all unread emails to a variable unread_emails
+# Display a message to the user for the title of 'Unread emails'
+# Add if statement to check if the length of unread_emails is equal to 0
+# Display a message to the user to show that there are no unread emails
+# Add else statement 
+# Using enumerate starting from 1, loop through all unread emails and display each email subject line with a corresponding number then continue
+# Add if statement to check if the user choice is equal to 3
+# Display a message to confirm the exit of the program and then call the exit function
+# Add if statement to check if the user choice is greater than 3 or less than or equal to 0
+# Display a message to show that they have entered incorrectly and continue with the loop
+# Add except statement to display a value error if an incorrect value is entered
+
