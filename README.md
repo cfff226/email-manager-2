@@ -1,10 +1,7 @@
-# email-manager-2
-
 # Email Manager
-### A holiday cost calculator program which is to be run in a code editor terminal, developed on VScode using Python.
 
 ## Description
-A program which involves an email simulator, replicating what it's like to view an email inbox and read emails individually.
+### A program which involves an email simulator, replicating what it's like to view an email inbox and read emails individually, developed on VScode using Python.
 
 ## Languages used
 * Python
