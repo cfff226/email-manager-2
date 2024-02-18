@@ -43,4 +43,4 @@ It is recommended to download a code editor such as VScode if you don't have one
 ![VIEW UNREAD!](email.png/view-unread.png)
 
 # Credits
-This project was intiailly created by the developers at Hyperiondev. I was tasked with adapting the code in order to produce a fully functional email simulator, using object oriented program.
+This project was intiailly created by the developers at Hyperiondev. I was tasked with adapting the code in order to produce a fully functional email simulator, using object oriented programming.
