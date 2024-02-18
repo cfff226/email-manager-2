@@ -14,14 +14,14 @@
 
 # Installation
 It is recommended to download a code editor such as VScode if you don't have one, although you can view this project in a browser.
-Go to https://github.com/cfff226/email-manager-2
-Select the repository.
-Navigate to the green button labeled 'Code'.
-Select 'Download ZIP'.
-Open up your code editor.
-Select 'File' and navigate to 'Open Folder' from the tab at the top of your screen.
-Select the downloaded folder from the pop up window.
-Open the downloaded folder, this will open all files from the zip folder in the code editor.
+* Go to https://github.com/cfff226/email-manager-2
+* Select the repository.
+* Navigate to the green button labeled 'Code'.
+* Select 'Download ZIP'.
+* Open up your code editor.
+* Select 'File' and navigate to 'Open Folder' from the tab at the top of your screen.
+* Select the downloaded folder from the pop up window.
+* Open the downloaded folder, this will open all files from the zip folder in the code editor.
 
 # Usage
 * Select the triangular play button in the top right corner of the code editor to start the program
@@ -37,6 +37,7 @@ Open the downloaded folder, this will open all files from the zip folder in the 
 
 
 * Enter '2' to view your unread emails
+
 * Enter '3' to exit the program
 
 ![VIEW UNREAD!](email.png/view-unread.png)
